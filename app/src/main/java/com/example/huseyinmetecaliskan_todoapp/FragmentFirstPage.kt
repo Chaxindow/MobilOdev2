@@ -7,14 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.huseyinmetecaliskan_todoapp.databinding.FragmentFirstPageBinding
-import com.example.huseyinmetecaliskan_todoapp.databinding.ListItemBinding
 
 
 class FragmentFirstPage : Fragment() {
 
     private lateinit var binding: FragmentFirstPageBinding
     private lateinit var myAdapter: ToDoAdapter
-    private lateinit var delBinding :ListItemBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +24,7 @@ class FragmentFirstPage : Fragment() {
 
 
 
-        binding.btnAdd.setOnClickListener(){
+        binding.btnAdd.setOnClickListener{
             val title = binding.etTitle.text.toString()
             val desc = binding.etDesc.text.toString()
 
